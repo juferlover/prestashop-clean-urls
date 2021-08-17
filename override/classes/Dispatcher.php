@@ -62,9 +62,9 @@ class Dispatcher extends DispatcherCore
             ),
             'cms_rule' => array(
                 'controller' => 'cms',
-                'rule' => 'info/{rewrite}',
+                'rule' => 'info/{id}-{rewrite}',
                 'keywords' => array(
-                    'id' => array('regexp' => '[0-9]+'),
+                    'id' => array('regexp' => '[0-9]+', 'param' => 'id_cms'),
                     'rewrite' => array('regexp' => '[_a-zA-Z0-9\pL\pS-]*', 'param' => 'cms_rewrite'),
                     'meta_keywords' => array('regexp' => '[_a-zA-Z0-9\pL-]*'),
                     'meta_title' => array('regexp' => '[_a-zA-Z0-9\pL-]*'),
